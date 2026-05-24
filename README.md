@@ -63,4 +63,4 @@ restores the original layout.
 
 ## Example
 
-See `example/example.qmd` and `example/example-revealjs.qmd`.
+See `docs/example.qmd` and `docs/example-revealjs.qmd`.
