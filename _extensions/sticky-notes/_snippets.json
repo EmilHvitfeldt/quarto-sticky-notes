@@ -1,0 +1,20 @@
+{
+  "Sticky note": {
+    "prefix": "sticky:basic",
+    "body": [
+      "::: {.sticky}",
+      "$1",
+      ":::"
+    ],
+    "description": "A default yellow square sticky note."
+  },
+  "Sticky note (positioned)": {
+    "prefix": "sticky:positioned",
+    "body": [
+      "::: {.sticky color=\"${1|yellow,pink|}\" top=\"${2:120px}\" left=\"${3:40%}\" width=\"${4:14em}\" tilt=\"${5:-3}\"}",
+      "$6",
+      ":::"
+    ],
+    "description": "Sticky note absolutely positioned, sized, and tilted."
+  }
+}

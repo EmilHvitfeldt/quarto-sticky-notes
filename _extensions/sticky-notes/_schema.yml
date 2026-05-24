@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=https://m.canouil.dev/quarto-wizard/schemas/extension.schema.json
+$schema: https://m.canouil.dev/quarto-wizard/schemas/extension.schema.json
+
+classes:
+  - name: sticky
+    description: >-
+      Renders the div as a styled sticky note. Defaults to a yellow square;
+      setting `width` or `height` switches to a freeform rectangle.
+    attributes:
+      - name: color
+        description: >-
+          Background color. Either a named color (`yellow`, `pink`) or a hex
+          value like `#c8e6c9`. Unknown names fall back to yellow.
+        type: string
+        default: yellow
+      - name: top
+        description: >-
+          Distance from the top of the containing block (HTML body, or the
+          current slide in Reveal.js). Any CSS length. Setting `top` or
+          `left` makes the sticky absolutely positioned.
+        type: string
+      - name: left
+        description: >-
+          Distance from the left of the containing block. Any CSS length.
+          Setting `top` or `left` makes the sticky absolutely positioned.
+        type: string
+      - name: width
+        description: >-
+          Width of the sticky as any CSS length. Setting `width` (or
+          `height`) opts out of the default square layout.
+        type: string
+      - name: height
+        description: >-
+          Height of the sticky as any CSS length. Setting `height` (or
+          `width`) opts out of the default square layout.
+        type: string
+      - name: tilt
+        description: >-
+          Rotation in degrees. May be negative. Applied as a CSS transform.
+        type: number
+        default: 0
