@@ -10,6 +10,9 @@ body { position: relative; }
   position: relative;
   isolation: isolate;
 }
+.sticky-draggable .sticky { cursor: grab; touch-action: none; user-select: none; }
+.sticky-dragging .sticky { cursor: grabbing; }
+.sticky-dragging { transition: none; }
 .sticky-wrapper.sticky-positioned {
   position: absolute;
   display: block;
