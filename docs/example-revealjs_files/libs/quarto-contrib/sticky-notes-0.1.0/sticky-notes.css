@@ -4,19 +4,65 @@ body { position: relative; }
    rather than to <body>, so they don't escape the slide. */
 .reveal .slides section { position: relative; }
 
+/* Wrapper injected by sticky-notes.js — carries positioning for absolute stickies */
+.sticky-wrapper {
+  display: inline-block;
+  position: relative;
+  isolation: isolate;
+}
+.sticky-draggable .sticky { cursor: grab; touch-action: none; user-select: none; }
+.sticky-dragging .sticky { cursor: grabbing; }
+.sticky-dragging { transition: none; }
+.sticky-wrapper.sticky-positioned {
+  position: absolute;
+  display: block;
+  isolation: isolate;
+}
+
+/* Shadow: outer carries the blur + top-clip; inner is the trapezoid shape */
+.sticky-shadow-outer {
+  position: absolute;
+  top: 0;
+  left: -6%;
+  width: 112%;
+  height: 106%;
+  filter: blur(24px);
+  clip-path: inset(0px -100px -100px -100px);
+  pointer-events: none;
+  z-index: 0;
+}
+.sticky-shadow-inner {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.22);
+  clip-path: polygon(5.5% 0%, 94.5% 0%, 97% 100%, 3% 100%);
+}
+
 .sticky {
   --sticky-bg: #fff7a8;
   background: var(--sticky-bg);
   padding: 1em 1.2em;
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.18);
   display: inline-block;
   max-width: 22em;
+  position: relative;
+  z-index: 1;
 }
 
 .sticky-yellow { --sticky-bg: #fff7a8; }
 .sticky-pink   { --sticky-bg: #ffc1d4; }
 
-.sticky-positioned {
-  position: absolute;
+/* .sticky-positioned is now on the wrapper, but keep for sticky itself as fallback */
+.sticky.sticky-positioned {
+  position: relative;
   display: block;
 }
+
+.sticky.square {
+  width: 12em;
+  aspect-ratio: 1 / 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.sticky-wrapper.sticky-positioned .sticky.square { display: flex; }
