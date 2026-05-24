@@ -1,0 +1,97 @@
+---
+title: Sticky Notes — Examples
+format: html
+filters:
+  - sticky-notes
+---
+
+## Default (yellow, inline)
+
+Here is some surrounding text.
+
+::: {.sticky}
+A default sticky note.
+:::
+
+And the text continues.
+
+## Named color
+
+::: {.sticky color="pink"}
+A pink one.
+:::
+
+## Hex color
+
+::: {.sticky color="#c8e6c9"}
+Custom hex green background.
+:::
+
+## Sized inline
+
+::: {.sticky width="14em"}
+Constrained to 14em wide.
+:::
+
+## Tilted inline
+
+::: {.sticky tilt="-3"}
+Tilted three degrees counter-clockwise.
+:::
+
+## Positioned
+
+::: {.sticky top="180px" left="60%" width="14em" tilt="4"}
+Positioned, sized, and tilted. Anchored to the page body.
+:::
+
+## Overlapping (source-order stacking)
+
+::: {.sticky top="500px" left="10%" color="pink" width="12em"}
+First (pink), should be under.
+:::
+
+::: {.sticky top="540px" left="14%" color="#ffd54f" width="12em" tilt="-5"}
+Second (amber, tilted), should cover the pink one.
+:::
+
+## Unknown color (expect warning)
+
+::: {.sticky color="taupe"}
+Should fall back to yellow with a warning at render time.
+:::
+
+## Block content inside a sticky
+
+::: {.sticky color="pink" width="20em"}
+A sticky with **rich** content:
+
+- a list item
+- another item
+
+```r
+1 + 1
+```
+:::
+
+## Square (post-it shape)
+
+::: {.sticky .square}
+Square!
+:::
+
+::: {.sticky .square color="pink"}
+Pink square.
+:::
+
+::: {.sticky .square color="#c8e6c9" tilt="-4" top="900px" left="50%"}
+Positioned square, tilted.
+:::
+
+## Trailing text
+
+Some text after all the stickies so the page has scrollable content.
+
+```{=html}
+<div style="height: 600px;"></div>
+```

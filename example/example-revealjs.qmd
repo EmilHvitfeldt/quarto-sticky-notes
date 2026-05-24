@@ -1,0 +1,40 @@
+---
+title: Sticky Notes — Reveal.js
+format:
+  revealjs:
+    width: 1280
+    height: 720
+filters:
+  - sticky-notes
+---
+
+## Inline stickies
+
+::: {.sticky}
+Default yellow.
+:::
+
+::: {.sticky color="pink"}
+Pink.
+:::
+
+## Positioned on a slide
+
+::: {.sticky top="80px" left="60%" width="14em" tilt="-3"}
+Anchored to this slide, not the page body.
+:::
+
+::: {.sticky color="#c8e6c9" top="380px" left="10%" width="12em" tilt="4"}
+Another, lower-left.
+:::
+
+Some body text underneath.
+
+## Block content
+
+::: {.sticky color="pink" width="20em"}
+A sticky with:
+
+- a list
+- another item
+:::

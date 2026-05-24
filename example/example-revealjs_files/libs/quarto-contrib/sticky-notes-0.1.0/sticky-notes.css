@@ -1,0 +1,22 @@
+body { position: relative; }
+
+/* In revealjs, anchor positioned stickies to the slide section
+   rather than to <body>, so they don't escape the slide. */
+.reveal .slides section { position: relative; }
+
+.sticky {
+  --sticky-bg: #fff7a8;
+  background: var(--sticky-bg);
+  padding: 1em 1.2em;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.18);
+  display: inline-block;
+  max-width: 22em;
+}
+
+.sticky-yellow { --sticky-bg: #fff7a8; }
+.sticky-pink   { --sticky-bg: #ffc1d4; }
+
+.sticky-positioned {
+  position: absolute;
+  display: block;
+}
