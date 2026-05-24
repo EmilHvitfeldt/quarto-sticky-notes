@@ -30,7 +30,7 @@ local function ensure_css()
   if css_added then return end
   quarto.doc.add_html_dependency({
     name = "sticky-notes",
-    version = "0.1.0",
+    version = "0.1.1",
     stylesheets = { "sticky-notes.css" },
     scripts = { "sticky-notes.js" },
   })
