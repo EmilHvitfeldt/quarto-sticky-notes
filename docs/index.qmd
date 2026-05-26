@@ -1,31 +1,31 @@
 ---
+title: "quarto-sticky-notes"
 format:
-  revealjs: 
-    theme: [default, styles.scss]
-    width: 1280
-    height: 720
-    include-after-body: 
-      - "all-the-js-code.html"
-pagetitle: Title of Talk
-echo: false
-code-line-numbers: false
+  html:
+    toc: false
 ---
 
-## Quarto
+A Quarto extension that turns `.sticky` fenced divs into styled sticky-note
+boxes. HTML and Reveal.js only.
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+## Install
 
-## Bullets
-
-When you click the **Render** button a document will be generated that includes:
-
--   Content authored with markdown
--   Output from executable code
-
-## Code
-
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```{r}
-1 + 1
+```bash
+quarto add emilhvitfeldt/quarto-sticky-notes
 ```
+
+Then add the filter to your document or `_quarto.yml`:
+
+```yaml
+filters:
+  - sticky-notes
+```
+
+## Examples
+
+- [HTML examples](example.html)
+- [Reveal.js examples](example-revealjs.html)
+
+## Source
+
+<https://github.com/emilhvitfeldt/quarto-sticky-notes>
