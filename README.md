@@ -3,6 +3,8 @@
 A Quarto extension that turns `.sticky` fenced divs into styled sticky-note
 boxes. HTML and Reveal.js only.
 
+![](sticky-notes.webp)
+
 ## Install
 
 ```bash
